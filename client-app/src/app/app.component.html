@@ -1,0 +1,9 @@
+<input type="file" (change)="onFileChanged($event)">
+<input type="button" (click)="onUpload()" value="upload">
+<br>
+<br>
+<input type="text" class="form-control" id="name" placeholder="image name" [(ngModel)]="imageName" name="name" />
+<input type="button" (click)="getImage()" value="Get Image">
+<div *ngIf=imageSrc>
+  <img [src]="imageSrc" height="200px" width="200px">
+</div>
